@@ -40,7 +40,6 @@ class InboxPage extends StatelessWidget {
                             ),
                           ],
                         ),
-                        // "DELETE" Button
                         Row(
                           children: [
                             const Text(

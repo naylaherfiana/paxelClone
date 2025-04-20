@@ -1,0 +1,36 @@
+1. orders
+- order_id (INTEGER PRIMARY KEY AUTOINCREMENT)
+- sender_name
+- sender_phone
+- sender_address
+- recipient_name
+- recipient_phone
+- recipient_address
+- package_size_id
+- item_type_id
+- service_id
+- total_payment
+- payment_method
+
+2. package_sizes
+- package_size_id (INTEGER PRIMARY KEY AUTOINCREMENT)
+- package_size_name
+- package_size_dimensions
+- package_size_weight
+- package_size_price
+- package_size_description
+
+3. item_types
+- item_type_id (INTEGER PRIMARY KEY AUTOINCREMENT)
+- item_type_name
+
+4. services
+- service_id (INTEGER PRIMARY KEY AUTOINCREMENT)
+- service_name
+- service_description
+
+5. service_package_prices
+- service_package_price_id (INTEGER PRIMARY KEY AUTOINCREMENT)
+- service_id (FOREIGN KEY REFERENCES services(service_id))
+- package_size_id (FOREIGN KEY REFERENCES package_sizes(package_size_id))
+- price
